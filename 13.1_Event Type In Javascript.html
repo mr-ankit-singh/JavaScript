@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Events in javascript</title>
+        <style>
+                div{
+                    align-items: center;
+                    justify-content:center;
+                    margin: 40px;
+
+                }
+                
+                .class{
+                    background-color:black;
+                    cursor: pointer;
+                    text-decoration:none;
+                    border: 1 px solid red;
+                    padding: 10px;
+                    color: white;
+                    border-radius: 15px;
+                    text-align: center;
+
+                }
+        </style>
+    </head>
+    <body> 
+        <div>
+            <h1>Events type in java script</h1>
+            <div>
+                <a onclick="alert('This is inline alert')">
+                    <span class="class"> Simple inline alert </span>
+                </a>
+            </div>
+            <div>
+                <a onclick="callingFunction()">
+                    <span class="class"> By calling a function </span>
+                </a>
+            </div>
+            <div>
+                <a id="usingId">
+                    <span class="class"> By using Id </span>
+                </a>
+            </div>
+            <div>
+                <a id="eventListner">
+                    <span class="class"> Event Listner </span>
+                </a>
+            </div>
+        </div>
+        <script>
+            //2nd way of writing function
+            const callingFunction = () => {
+                alert("By using calling a function");
+            }
+            //3rd ways of writing a function
+            const usingId = document.getElementById('usingId');
+            usingId.onclick = function(){
+                alert('By using id selector')
+            }
+            // 4th ways of writing a function
+            const eventListner = document.querySelector('#eventListner');
+            eventListner.addEventListener('click' , () => {
+                alert('Event listner')
+            })
+
+        </script>
+    </body>
+</html>

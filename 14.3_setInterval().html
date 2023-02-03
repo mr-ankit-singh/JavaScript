@@ -1,0 +1,39 @@
+<!-- 
+  ** The setInterval() Method  **
+    
+  -The setInterval() method repeats a given function at every given time-interval.
+
+  -Syntax : window.setInterval(function, milliseconds);
+
+  -The window.setInterval() method can be written without the window prefix.
+  -The first parameter is the function to be executed.
+  -The second parameter indicates the length of the time-interval between each execution. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SetInterval() method</title>
+</head>
+
+<body>
+    <div>
+        <p>You can stop when I reach at 5</p>
+        <br>
+        <button id="btn">Click Here</button>
+    </div>
+    <script>
+        const stopNum = document.querySelector('p')
+        const btn = document.querySelector('#btn')
+        let num=0;
+        const showMyNum = () => {
+            stopNum.innerHTML = "Loading...."
+            setInterval(() => {
+                stopNum.innerHTML = `${num}`
+                num++
+            },1000)
+        }
+        btn.addEventListener('click', showMyNum)
+    </script>
+</body>
+
+</html>

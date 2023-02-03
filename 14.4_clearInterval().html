@@ -1,0 +1,58 @@
+<!-- 
+  ** clearInterval() method  **
+    -The clearInterval() method stops the executions of the function specified in the setInterval() method.
+
+    window.clearInterval(timerVariable)
+    -The window.clearInterval() method can be written without the window prefix.
+    -The clearInterval() method uses the variable returned from setInterval():
+
+    -syntax :
+        myVar = setInterval(function, milliseconds);
+        clearInterval(myVar); 
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ClearInterval() method</title>
+    <style>
+        button{
+                border-radius: 15px;
+                padding: 10px;
+                box-sizing: border-box;
+                background-color: black;
+                color:antiquewhite;
+                cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>You can stop when I reach at 5</p>
+        <br>
+        <button id="btn">Start</button>
+        <button id="btn1">Stop</button>
+    </div>
+    <script>
+        const stopNum = document.querySelector('p')
+        const btn = document.querySelector('#btn')
+        const stopInterval = document.querySelector('#btn1')
+        let timeRef;
+        let num=0;
+        const showMyNum = () => {
+            stopNum.innerHTML = "Loading...."
+
+            timeRef = setInterval(() => {
+                stopNum.innerHTML = `${num}`
+                num++
+            },1000);
+        }
+        btn.addEventListener('click', showMyNum)
+        stopInterval.addEventListener('click' ,() => {
+            clearInterval(timeRef);
+        })
+    </script>
+</body>
+
+</html>

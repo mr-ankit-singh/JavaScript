@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input Events</title>
+    </head>
+    <body>
+        <div>
+            <label>Your name :</label>
+            <input type="text" name="" id ="name">
+            <br>
+            <label> Choose an ice creame flavour</label>
+            <select id="icecreame" name="icecreame" onchange="selectElement()">
+                <option value="">Select one</option>
+                <option value="choclate">choclate</option>
+                <option value="sardine">sardine</option>
+                <option value="vanilla">vanilla</option>
+            </select>
+            <br>
+            <div id="result"></div>
+        </div>
+        <script>
+            //mtd 1 (use onchange mtd in html)
+            const selectElement = () => {
+                const inputChange = document.getElementById('name').value;
+                const icecreame = document.getElementById('icecreame').value;
+                const result = document.getElementById('result')
+                result.innerHTML =`Mr ${inputChange} select ${icecreame} icecreame flavour`;
+            }
+            // mtd 2 (without using onchange mtd in html)
+            const icecreame = document.getElementById('icecreame');
+            icecreame.addEventListener('change' , () => {
+                const inputChange = document.getElementById('name').value;
+                const icecreame = document.getElementById('icecreame').value;
+                const result = document.getElementById('result')
+                result.innerHTML =`Mr ${inputChange} select ${icecreame} icecreame flavour`;
+            });
+        </script>
+    </body>
+</html>

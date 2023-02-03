@@ -1,0 +1,57 @@
+<!--
+    ** Event Capturing  **
+    
+    - In the capturing phase, events propagate from the Window down through the DOM tree to the target node
+    - In event capturing, an event propagates from the outermost element to the target element. 
+    - It is the opposite of event bubbling, where events propagate outwards from the target to the outer elements.
+
+-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <Title>Event Capturing</Title>
+    <style>
+      div{
+        cursor: pointer;
+      }
+      #parentId{
+        border:1px solid black;
+        height: 300px;
+        width: 300px;
+        background-color: blue;
+        margin-top: 100px;
+        margin-left: 200px;
+
+      }
+      #childId{
+        border:1px solid black;
+        height: 150px;
+        width: 150px;
+        background-color: red;
+        margin-top: 70px;
+        margin-left: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parentId">
+      <div id="childId"></div>
+    </div>
+    <script>
+      let parentId = document.getElementById('parentId');
+      let childId = document.getElementById('childId');
+
+      const parentCall = () => {
+        alert('Parent div call');
+        //event.stopPropagation();//Es property se ab woh apna child tk nahi jayega
+      }
+      const childCall = () => {
+        alert('child div call');
+        
+      }
+      parentId.addEventListener('click' , parentCall , true);
+      childId.addEventListener('click' , childCall , true);
+    </script>
+  </body>
+</html>  

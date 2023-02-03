@@ -1,0 +1,49 @@
+<!-- 
+ ** clearTimeout() method **
+
+    -The clearTimeout() method stops the execution of the function specified in setTimeout().
+    - ex: window.clearTimeout(timeoutVariable)
+  
+    -The window.clearTimeout() method can be written without the window prefix.
+    -The clearTimeout() method uses the variable returned from setTimeout():
+    -Ex:
+        myVar = setTimeout(function, milliseconds);
+        clearTimeout(myVar);
+
+    If the function has not already been executed, you can stop the execution by calling the clearTimeout() method
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cleartimeout mtd</title>
+        <style>
+            p{
+                font-size: larger;
+                font-weight: 10px;
+            
+            }
+            button{
+                display:flex;
+                border-radius: 15px;
+                padding: 10px;
+                box-sizing: border-box;
+                background-color: black;
+                 color:antiquewhite;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <p>The clearTimeout() method stops the execution of the function specified in setTimeout().</p>
+        <p>Click Try It to execute the function</p>
+        <p> Click stop to stop the execution</p>
+        <button onclick="myVar=setTimeout(myFun , 3000)">Try it</button>
+        <button onclick="clearTimeout(myVar)">Stop it</button>
+
+        <script>
+            function myFun(){
+                alert('Hello User');
+            }
+        </script>
+    </body>
+</html>

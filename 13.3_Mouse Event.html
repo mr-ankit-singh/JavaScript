@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mouse Event</title>
+        <style>
+            p{
+                height: 1000px;
+                width:500px;
+                margin: 50px;
+                display:flex;
+            }
+            div{
+                width:250px;
+                height: 150px;
+                padding:20px;
+                background-color: yellow;
+                display:flex;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="box">
+        <h1>Mouse enter / mouse leave</h1>
+        </div>
+        <p id="mouse" onmousedown="mousedown()" onmouseup="mouseup()" onmousewheel="mousewheel()" >
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, animi exercitationem necessitatibus ullam quo esse maiores? Eligendi, ut distinctio. Voluptates ipsam inventore quia, consequuntur, nemo quo deserunt aliquid, ducimus officiis fuga rem repellendus rerum officia consequatur corporis nam dolore culpa dignissimos laboriosam dolor asperiores voluptatem necessitatibus! Tempore magnam iure possimus amet pariatur, deleniti sunt impedit iusto delectus. Dicta illo fuga neque dolorem recusandae nemo corporis officia necessitatibus perspiciatis veniam possimus dolore obcaecati asperiores commodi odio, ipsam nostrum laborum cupiditate? Mollitia facere expedita beatae cumque et officiis vitae aperiam culpa! Voluptas necessitatibus sunt repellat aut amet suscipit nobis explicabo laudantium quam veritatis doloremque, dignissimos, exercitationem officiis saepe dolorum similique animi blanditiis ullam! Amet provident, rem doloremque sapiente fuga iste quae magnam ipsa quibusdam fugiat pariatur numquam aperiam deserunt, mollitia nam dignissimos at consequuntur, cum voluptatum! Quidem, cum architecto! Unde et est, nobis laudantium quisquam fuga sit in odio sequi aperiam quia dignissimos deleniti at cum, adipisci animi excepturi? Dolorum, ipsam nulla, dignissimos iusto quaerat tempore dolore at adipisci, aliquid dicta optio. Voluptas accusamus recusandae reiciendis nisi tempora autem porro ipsa animi similique. Accusantium in sapiente sequi minus ipsum dicta iusto quidem provident numquam fuga repudiandae aperiam eum, facere sit et reprehenderit! Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nihil vel sit impedit magni totam ducimus, ea voluptates consequatur odio distinctio magnam accusantium saepe suscipit alias inventore. Quos, doloribus blanditiis!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, animi exercitationem necessitatibus ullam quo esse maiores? Eligendi, ut distinctio. Voluptates ipsam inventore quia, consequuntur, nemo quo deserunt aliquid, ducimus officiis fuga rem repellendus rerum officia consequatur corporis nam dolore culpa dignissimos laboriosam dolor asperiores voluptatem necessitatibus! Tempore magnam iure possimus amet pariatur, deleniti sunt impedit iusto delectus. Dicta illo fuga neque dolorem recusandae nemo corporis officia necessitatibus perspiciatis veniam possimus dolore obcaecati asperiores commodi odio, ipsam nostrum laborum cupiditate? Mollitia facere expedita beatae cumque et officiis vitae aperiam culpa! Voluptas necessitatibus sunt repellat aut amet suscipit nobis explicabo laudantium quam veritatis doloremque, dignissimos, exercitationem officiis saepe dolorum similique animi blanditiis ullam! Amet provident, rem doloremque sapiente fuga iste quae magnam ipsa quibusdam fugiat pariatur numquam aperiam deserunt, mollitia nam dignissimos at consequuntur, cum voluptatum! Quidem, cum architecto! Unde et est, nobis laudantium quisquam fuga sit in odio sequi aperiam quia dignissimos deleniti at cum, adipisci animi excepturi? Dolorum, ipsam nulla, dignissimos iusto quaerat tempore dolore at adipisci, aliquid dicta optio. Voluptas accusamus recusandae reiciendis nisi tempora autem porro ipsa animi similique. Accusantium in sapiente sequi minus ipsum dicta iusto quidem provident numquam fuga repudiandae aperiam eum, facere sit et reprehenderit! Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nihil vel sit impedit magni totam ducimus, ea voluptates consequatur odio distinctio magnam accusantium saepe suscipit alias inventore. Quos, doloribus blanditiis!
+        </p>
+        <script>
+                function mousedown(){
+                    document.getElementById("mouse").style.color = "blue";
+                }
+                function mouseup(){
+                    document.getElementById("mouse").style.color = "green";
+                }
+                function mousewheel(){
+                    document.getElementById("mouse").style.color = "red";
+                }
+
+                // mouse enter / mouse leave
+                const mEnter = document.getElementById('box');
+
+                mEnter.addEventListener('mouseenter' , () =>{
+                    mEnter.style.backgroundColor = 'red';
+                    console.log('mouse enter')
+                })
+                mEnter.addEventListener('mouseleave' , () =>{
+                    mEnter.style.backgroundColor = 'blue';
+                    console.log('mouse leave')
+                })
+        </script>
+    </body>
+</html>

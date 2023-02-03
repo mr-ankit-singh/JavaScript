@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Keyboard Events</title>
+        <style>
+            div{
+                margin: 10px 40%;
+            }
+            p{
+                color:red;
+            }
+            .keyevent{
+                height:50px;
+                width:200px;
+                box-sizing: border-box;
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>A function is trigged when the user is pressed a key in the input field</p>
+            <br>
+            <input type="text" class="keyevent" onkeypress="keypress()" onkeydown="keydown()" onkeyup="keyup()">
+            <br>
+            <p id="keys"></p>
+        </div>
+        <script>
+            const keypress = () => {
+                document.getElementById('keys').innerHTML = ` you pressed ${event.key} and its code is ${event.code} `;
+            }
+            
+            const keydown = () => {
+                document.getElementById('keys').innerHTML = ` Key is down`;
+                //when we click backslach or delete tan it will run
+            }
+            const keyup = () => {
+                document.getElementById('keys').innerHTML = ` Key is up`;
+                
+            }
+        </script>
+    </body>
+</html>

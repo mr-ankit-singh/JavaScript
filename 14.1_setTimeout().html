@@ -1,0 +1,49 @@
+<!-- 
+ 1) setTimeout() method
+      -The window.setTimeout() method can be written without the window prefix.
+      -The first parameter is a function to be executed.
+      -The second parameter indicates the number of milliseconds before execution.
+ -->
+
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Settimeout Event</title>
+            <style>
+                  div{
+                        margin: 0 50px;
+                        
+                  }
+                  #heading{
+                        color:blue;
+                  }
+                  #btn{
+                        border-radius: 15px;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        background-color: black;
+                        color:antiquewhite;
+                        cursor: pointer;
+                  }
+            </style>
+      </head>
+      <body>
+            <div>
+                  <p id="heading"><h1>You want to know my name</h1></p>
+                  <p id="showMyName"></p>
+                  <br>
+                  <button id="btn">Click here</button>
+            </div>
+            <script>
+                  const myName = document.querySelector('#showMyName')
+                  const btn= document.querySelector('#btn')
+                  const showMyName = () => {
+                        myName.innerHTML = "Loading...."
+                        setTimeout(() => {
+                              myName.innerHTML = "Ankit Singh"
+                        }, 1000)
+                  }
+                  btn.addEventListener('click' , showMyName)
+            </script>
+      </body>
+</html>

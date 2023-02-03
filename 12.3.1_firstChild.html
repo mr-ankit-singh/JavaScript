@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript - DOM first child</title>
+</head>
+
+<body>
+  <h2>Getting first child of the parent node using "firstChild" property.</h2>
+  <div id="parent">
+    <h1>This is heading</h1>
+    <p>This is paragraph</p>
+  </div>
+  <p><span class="bold">Note</span>: If you remove white space (new line here) between h1 tag and parent element then h1 will become first child.</p>
+  
+  <script>
+    const element = document.getElementById("parent");
+    const first = element.firstChild;
+    console.log(first); // text node
+    console.log(first.nodeName); // output: #text
+  </script>
+</body>
+
+</html>
+
+<!--
+Note: The nodeName property return name of the node,
+i.e if the node is the anchor tag then return 'A', if the node is text then returns #text.-->

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Previous page</Title>
+        <style>
+            body{
+                background-color: blue;
+            }
+            .button_su{
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="button_su" onclick="goback()">Go Back</button>
+        <p>Notice click to the back button you will redirect to the previous page</p>
+        <script>
+            function goback(){
+                window.history.back(); //BOM me aata hai yeh
+            }
+        </script>
+    </body>
+</html>
